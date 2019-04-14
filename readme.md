@@ -6,8 +6,18 @@ This project is a item tracking application that has an ethereum contract and a 
 
 ## Libraries Used
 
-#### Truffle (v4.7)
+#### Nodejs
+v10.12.0
+
+#### Web3
+v1.0.0-beta.37
+
+#### Truffle
+v5.0.9 (core: 5.0.9)
 The javascript framework used for solidity
+
+#### Solidity
+ v0.4.24 (solc-js)
 
 #### truffle-hdwallet-provider
 This library was used  to push the contract onto the Rinkeby Network.
@@ -17,6 +27,7 @@ This library was used  to push the contract onto the Rinkeby Network.
 
 ## Rinkeby Migrations
 
+**CONTRACT ADDRESS ON RINKEBY : 0x2dEee7613d52e5DeeB176A1313D9aFb148Ef661c**
 
 > Network name:    'rinkeby'
 > Network id:      4
