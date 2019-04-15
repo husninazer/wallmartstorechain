@@ -7,8 +7,10 @@ import '../itemaccesscontrol/DistributorRole.sol';
 import '../itemaccesscontrol/WallmartStoreRole.sol';
 import '../itemaccesscontrol/ConsumerRole.sol';
 
+import '../itemcore/Ownable.sol';
 
-contract SupplyChain is FarmerRole, ProcessorRole, DistributorRole, WallmartStoreRole, ConsumerRole {
+
+contract SupplyChain is FarmerRole, ProcessorRole, DistributorRole, WallmartStoreRole, ConsumerRole, Ownable {
 
   // Define 'owner'
   address owner;
@@ -70,11 +72,7 @@ contract SupplyChain is FarmerRole, ProcessorRole, DistributorRole, WallmartStor
   event Received(uint upc);
   event Sold(uint upc);
 
-  // Define a modifer that checks to see if msg.sender == owner of the contract
-  modifier onlyOwner() {
-    require(msg.sender == owner);
-    _;
-  }
+
 
   // Define a modifer that verifies the Caller
   modifier verifyCaller (address _address) {
@@ -290,7 +288,7 @@ contract SupplyChain is FarmerRole, ProcessorRole, DistributorRole, WallmartStor
 
 
   // Define a function 'sellItem' that allows a farmer to mark an item 'ForSale'
-  function sellItem(uint _upc) received(upc)  onlyConsumer 
+  function sellItem(uint _upc) received(upc)  onlyConsumer
   // Call modifier to check if upc has passed previous supply chain stage
 
   // Call modifer to check if buyer has paid enough

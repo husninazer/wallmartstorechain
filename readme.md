@@ -22,8 +22,33 @@ The javascript framework used for solidity
 #### truffle-hdwallet-provider
 This library was used  to push the contract onto the Rinkeby Network.
 
+## Compiling and Testing
+
+On the project directory, run
+
+    npm install
+
+Use truffle to compile and test the contracts
+
+    truffle compile
+    truffle --reset migrate
+    truffle test
 
 
+## Front-end
+
+To run the front-end app, type
+
+    npm run dev
+after installing all the dependancies
+
+
+## Usage
+
+The contract can be used to
+- Create and track a wallmart product submitted for shipment from farmer to the processor, distributor, wallmart store and to consumer.
+- Receive product from shipment and make the payment through Ethereum.
+- Validate the authenticity of the product.
 
 ## Rinkeby Migrations
 
